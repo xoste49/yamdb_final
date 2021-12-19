@@ -1,19 +1,10 @@
-from .views import (
-    TitleViewSet,
-    CategoryViewSet,
-    GenreViewSet,
-    # UserMeView,
-    UserViewSet,
-    CommentViewSet,
-    ReviewViewSet,
-    get_token,
-    get_confirmation,
-)
-
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView
 
+from .views import (CategoryViewSet, CommentViewSet,  # UserMeView,
+                    GenreViewSet, ReviewViewSet, TitleViewSet, UserViewSet,
+                    get_confirmation, get_token)
 
 router = DefaultRouter()
 
